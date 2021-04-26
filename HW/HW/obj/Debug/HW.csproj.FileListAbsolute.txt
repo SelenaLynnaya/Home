@@ -19,3 +19,23 @@ C:\Users\admin\Desktop\Домашняя работа на дому\уп\HW\HW\ob
 C:\Users\admin\Desktop\Домашняя работа на дому\уп\HW\HW\obj\Debug\HW.pdb
 C:\Users\admin\Desktop\Домашняя работа на дому\уп\HW\HW\obj\Debug\Sale.g.cs
 C:\Users\admin\Desktop\Домашняя работа на дому\уп\HW\HW\obj\Debug\Sale.baml
+C:\Users\Студент\Desktop\HW\HW\bin\Debug\HW.exe.config
+C:\Users\Студент\Desktop\HW\HW\bin\Debug\HW.exe
+C:\Users\Студент\Desktop\HW\HW\bin\Debug\HW.pdb
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\HW.csprojAssemblyReference.cache
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\MainWindow.g.cs
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\Manager.g.cs
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\Sale.g.cs
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\App.g.cs
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\HW_MarkupCompile.cache
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\HW_MarkupCompile.lref
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\App.baml
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\MainWindow.baml
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\Manager.baml
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\ResourceDictionary.baml
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\Sale.baml
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\HW.g.resources
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\HW.Properties.Resources.resources
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\HW.csproj.GenerateResource.cache
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\HW.exe
+C:\Users\Студент\Desktop\HW\HW\obj\Debug\HW.pdb

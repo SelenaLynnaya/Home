@@ -5,26 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW"
         mc:Ignorable="d"
-        Title="Вход" Height="400" Width="250" Background="#ffffff">
+        Title="Вход" Height="330" Width="200" Background="#ffffff">
     <Grid>
 
-        <StackPanel VerticalAlignment="Bottom" Margin="10">
+        <StackPanel VerticalAlignment="Bottom" Margin="10,10,10,3">
             <Label HorizontalAlignment="Center"
                  Style="{StaticResource MainLabelStyle}"
-                 Foreground="Green"
-                 Content="Вход в аккаунт"/>
+                 Foreground="#00985f"
+                 Content="Авторизация"
+                 Margin="10,10,10,3"/>
             <Label  
                  Style="{StaticResource MainLabelStyle}"
-                 Content="Login"/>
+                 Content="Login" Margin="10,10,10,3"/>
             <TextBox  
                x:Name="TextBoxLogin"
-               Style="{StaticResource MainTextBoxStyle}" />
+               Style="{StaticResource MainTextBoxStyle}" Margin="10,0,10,10" />
             <Label  
                  Style="{StaticResource MainLabelStyle}"
-                 Content="Password"/>
+                 Content="Password" Margin="10,10,10,3"/>
             <PasswordBox 
                x:Name="PasswordBoxPassword" 
-               Style="{StaticResource MainPasswordBoxStyle}"/>
+               Style="{StaticResource MainPasswordBoxStyle}" Margin="10,0,10,0"/>
             <Button  
                 x:Name="OkButton"
                 Style="{StaticResource MainButtonStyle}"

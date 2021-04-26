@@ -18,12 +18,17 @@
         <Image
             Grid.Column="0"
             Grid.Row="0"
-            Source="Properties/i.png"
+            Source="Properties/icon.png"
             Style="{DynamicResource MainImageStyle}" 
             Width="150"
             Height="150"/>
         <StackPanel VerticalAlignment="Stretch" Margin="14" Grid.Column="1"
             Grid.Row="0">
+            <Label
+                Style="{StaticResource  MainLabelStyle}"
+                Height="30"
+                Foreground="#00985f"
+                Content="Меню"/>
             <Label
                 Style="{StaticResource  MainLabelStyle}"
                 Height="30"
@@ -33,30 +38,29 @@
                 Height="30"
                 Content="Manager"/>
         </StackPanel>
-        <Button
-            x:Name="Sort_By_NameButton"
-            Grid.Column="1"
-            Grid.Row="1"
-            Width="150"
-            VerticalAlignment="Center"
-            Style="{StaticResource MainButton1Style}"
-            Content="sort by name"  
-            Click="Sort_By_NameButton_Click"/>
+
+        <ComboBox  
+            Grid.Row="1" Grid.Column="1"
+            VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>sort by name</TextBlock>
+            <TextBlock>sort by number</TextBlock>
+        </ComboBox>
+        
         <Button
             x:Name="Sort_By_NumberButton"
             Grid.Column="1"
             Grid.Row="1"
             Width="150"
-            VerticalAlignment="Bottom"
+            VerticalAlignment="Center"
             Style="{StaticResource MainButton1Style}"
-            Content="sort by number"  
+            Content="Sorting"  
             Click="Sort_By_NumberButton_Click"/>
         <Button
             x:Name="SaleButton"
             Grid.Column="1"
             Grid.Row="1"
             Width="150"
-            VerticalAlignment="Top"
+            VerticalAlignment="Bottom"
             Style="{StaticResource MainButton1Style}"
             Content="Sale" 
             Click="SaleButton_Click"/>

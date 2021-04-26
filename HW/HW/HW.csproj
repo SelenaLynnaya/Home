@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -114,6 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Properties\i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

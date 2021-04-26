@@ -25,11 +25,12 @@ namespace HW
             InitializeComponent();
         }
         public string login = "login1";
+        public string password = "tuptup";
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (TextBoxLogin.Text == login && PasswordBoxPassword.Password == "tuptup")
+                if (TextBoxLogin.Text == login && PasswordBoxPassword.Password == password)
                 {
                     Manager window = new Manager();
                     window.Show();
@@ -38,7 +39,7 @@ namespace HW
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Неправильный логин или пороль");
+                MessageBox.Show("Неправильный логин или пороль","Ошибка",MessageBoxButton.OK,MessageBoxImage.Error);
                 return;
             }
 
