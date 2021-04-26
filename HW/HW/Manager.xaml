@@ -28,7 +28,7 @@
                 Style="{StaticResource  MainLabelStyle}"
                 Height="30"
                 Foreground="#00985f"
-                Content="Меню"/>
+                Content="Menu"/>
             <Label
                 Style="{StaticResource  MainLabelStyle}"
                 Height="30"
@@ -67,9 +67,9 @@
         <DataGrid Grid.Column="0" Grid.Row="1">
             <DataGrid.Columns >
                 <DataGridTextColumn Header="№"/>
-                <DataGridTextColumn Header="Наименование"/>
-                <DataGridTextColumn Header="Кол-во товара"/>
-                <DataGridTextColumn Header="Цена"/>
+                <DataGridTextColumn Header="Name"/>
+                <DataGridTextColumn Header="Quantity of goods"/>
+                <DataGridTextColumn Header="Price"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

@@ -43,19 +43,19 @@
                 Width="60" 
                 Height="27"
                 Margin="13"
-                 Content="Наименование"/>
+                 Content="Name"/>
             <Label 
                 Style="{StaticResource MainLabelStyle}"
-                Width="50" 
+                Width="58" 
                 Height="27"
                 Margin="1"
-                 Content="Кол-во товара"/>
+                 Content="Quantity"/>
             <Label 
                 Style="{StaticResource MainLabelStyle}"
                 Width="50" 
                 Height="27"
                 Margin="10"
-                 Content="Цена"/>
+                 Content="Price"/>
             <Button
                 x:Name="BackUserButton"
                 Style="{StaticResource MainButton1Style}"
