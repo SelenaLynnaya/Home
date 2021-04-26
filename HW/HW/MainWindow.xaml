@@ -1,0 +1,35 @@
+﻿<Window x:Class="HW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW"
+        mc:Ignorable="d"
+        Title="Вход" Height="400" Width="250" Background="#ffffff">
+    <Grid>
+
+        <StackPanel VerticalAlignment="Bottom" Margin="10">
+            <Label HorizontalAlignment="Center"
+                 Style="{StaticResource MainLabelStyle}"
+                 Foreground="Green"
+                 Content="Вход в аккаунт"/>
+            <Label  
+                 Style="{StaticResource MainLabelStyle}"
+                 Content="Login"/>
+            <TextBox  
+               x:Name="TextBoxLogin"
+               Style="{StaticResource MainTextBoxStyle}" />
+            <Label  
+                 Style="{StaticResource MainLabelStyle}"
+                 Content="Password"/>
+            <PasswordBox 
+               x:Name="PasswordBoxPassword" 
+               Style="{StaticResource MainPasswordBoxStyle}"/>
+            <Button  
+                x:Name="OkButton"
+                Style="{StaticResource MainButtonStyle}"
+                Content="Ок"
+                Margin="14" Click="OkButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

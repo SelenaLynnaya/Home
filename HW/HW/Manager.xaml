@@ -1,0 +1,72 @@
+﻿<Window x:Class="HW.Manager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW"
+        mc:Ignorable="d"
+        Title="Manager" Height="350" Width="510" Background="#fff">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image
+            Grid.Column="0"
+            Grid.Row="0"
+            Source="Properties/i.png"
+            Style="{DynamicResource MainImageStyle}" 
+            Width="150"
+            Height="150"/>
+        <StackPanel VerticalAlignment="Stretch" Margin="14" Grid.Column="1"
+            Grid.Row="0">
+            <Label
+                Style="{StaticResource  MainLabelStyle}"
+                Height="30"
+                Content="login1"/>
+            <Label
+                Style="{StaticResource  MainLabelStyle}"
+                Height="30"
+                Content="Manager"/>
+        </StackPanel>
+        <Button
+            x:Name="Sort_By_NameButton"
+            Grid.Column="1"
+            Grid.Row="1"
+            Width="150"
+            VerticalAlignment="Center"
+            Style="{StaticResource MainButton1Style}"
+            Content="sort by name"  
+            Click="Sort_By_NameButton_Click"/>
+        <Button
+            x:Name="Sort_By_NumberButton"
+            Grid.Column="1"
+            Grid.Row="1"
+            Width="150"
+            VerticalAlignment="Bottom"
+            Style="{StaticResource MainButton1Style}"
+            Content="sort by number"  
+            Click="Sort_By_NumberButton_Click"/>
+        <Button
+            x:Name="SaleButton"
+            Grid.Column="1"
+            Grid.Row="1"
+            Width="150"
+            VerticalAlignment="Top"
+            Style="{StaticResource MainButton1Style}"
+            Content="Sale" 
+            Click="SaleButton_Click"/>
+        <DataGrid Grid.Column="0" Grid.Row="1">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="№"/>
+                <DataGridTextColumn Header="Наименование"/>
+                <DataGridTextColumn Header="Кол-во товара"/>
+                <DataGridTextColumn Header="Цена"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
