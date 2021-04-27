@@ -1,0 +1,68 @@
+﻿<Window x:Class="HW.Sale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW"
+        mc:Ignorable="d"
+        Title="Sale" Height="260" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel VerticalAlignment="Stretch" Margin="10" Grid.Column="1"
+            Grid.Row="0">
+            <TextBox
+            Style="{StaticResource  MainTextBoxStyle}"/>
+            <TextBox
+            Style="{StaticResource  MainTextBoxStyle}"/>
+            <TextBox
+            Style="{StaticResource  MainTextBoxStyle}"/>
+            <TextBox
+            Style="{StaticResource  MainTextBoxStyle}"/>
+            <Button
+                x:Name="CreateUserButton"
+                Style="{StaticResource MainButton1Style}"
+                Width="80" 
+                Height="25"
+                Content="Create" Click="CreateUserButton_Click"  />
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Stretch" Margin="10" Grid.Column="0"
+            Grid.Row="0">
+            <Label 
+                Style="{StaticResource MainLabelStyle}"
+                Width="50" 
+                Height="27"
+                Margin="3"
+                 Content="№"/>
+            <Label 
+                Style="{StaticResource MainLabelStyle}"
+                Width="60" 
+                Height="27"
+                Margin="13"
+                 Content="Name"/>
+            <Label 
+                Style="{StaticResource MainLabelStyle}"
+                Width="58" 
+                Height="27"
+                Margin="1"
+                 Content="Quantity"/>
+            <Label 
+                Style="{StaticResource MainLabelStyle}"
+                Width="50" 
+                Height="27"
+                Margin="10"
+                 Content="Price"/>
+            <Button
+                x:Name="BackUserButton"
+                Style="{StaticResource MainButton1Style}"
+                Width="80" 
+                Height="25"
+                Margin="10"
+                Content="Back" Click="BackUserButton_Click"  />
+        </StackPanel>
+    </Grid>
+</Window>
