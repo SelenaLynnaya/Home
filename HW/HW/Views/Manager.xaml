@@ -4,8 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW"
+        xmlns:vm="clr-namespace:HW.Model"
         mc:Ignorable="d"
         Title="Manager" Height="350" Width="510" Background="#fff">
+    <Window.DataContext>
+        <vm:UserViewModel x:Name="UserView"/>
+    </Window.DataContext>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -69,7 +74,8 @@
             Click="SaleButton_Click"/>
         <DataGrid Grid.Column="0" Grid.Row="1">
             <DataGrid.Columns >
-                <DataGridTextColumn Header="№"/>
+                <DataGridTextColumn Header="№"
+                                    Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Name"/>
                 <DataGridTextColumn Header="Quantity of goods"/>
                 <DataGridTextColumn Header="Price"/>

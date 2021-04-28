@@ -22,7 +22,6 @@ namespace HW
     /// </summary>
     public partial class MainWindow : Window
     {
-        Manager m;
         public MainWindow()
         {
             InitializeComponent();
