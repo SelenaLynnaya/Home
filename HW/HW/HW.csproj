@@ -65,16 +65,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\ListOfOrder.cs" />
+    <Compile Include="Entities\ModelOrders.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\Products.cs" />
+    <Compile Include="Entities\UserData.cs" />
+    <Compile Include="Entities\Users.cs" />
     <Compile Include="Model\OrderModel.cs" />
     <Compile Include="Model\OrderViewModel.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="Model\UserViewModel.cs" />
-    <Compile Include="NewFolderOrders\Client.cs" />
-    <Compile Include="NewFolderOrders\ModelOrders.cs" />
-    <Compile Include="NewFolderOrders\Order.cs" />
-    <Compile Include="NewFolderOrders\Products.cs" />
-    <Compile Include="NewFolderOrders\UserData.cs" />
-    <Compile Include="NewFolderOrders\Users.cs" />
     <Compile Include="Views\Sale.xaml.cs">
       <DependentUpon>Sale.xaml</DependentUpon>
     </Compile>
@@ -134,9 +135,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="i.png" />
   </ItemGroup>

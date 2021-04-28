@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HW.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace HW.Model
 
         public string UserId { get; set; }
 
-        public static UserModel ModelOrder(HW.NewFolderOrders.Users context)
+        public static UserModel ModelOrder(Users context)
         {
             return new UserModel
             {
@@ -27,9 +28,9 @@ namespace HW.Model
             };
         }
 
-        public static HW.NewFolderOrders.Users ModelOrder(UserModel context)
+        public static Users ModelOrder(UserModel context)
         {
-            using (var db = new HW.NewFolderOrders.ModelOrders())
+            using (var db = new ModelOrders())
             {
                 var user = db.Users.FirstOrDefault(u => u.Id == context.Id);
                 return user;

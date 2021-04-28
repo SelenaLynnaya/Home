@@ -6,14 +6,10 @@
         xmlns:local="clr-namespace:HW"
         xmlns:vm="clr-namespace:HW.Model"
         mc:Ignorable="d"
-        Title="Manager" Height="350" Width="510" Background="#fff">
-    <Window.DataContext>
-        <vm:UserViewModel x:Name="UserView"/>
-    </Window.DataContext>
-    
+        Title="Manager" Height="350" Width="660" Background="#fff">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="250"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -26,21 +22,17 @@
             Style="{DynamicResource MainImageStyle}" 
             Width="150"
             Height="150" Source="/HW;component/Image/un.jpg"/>
-        <StackPanel VerticalAlignment="Stretch" Margin="14" Grid.Column="1"
-            Grid.Row="0">
+        <StackPanel VerticalAlignment="Stretch" Margin="10" 
+                    Grid.Column="0"
+                    Grid.Row="1">
             <Label
                 Style="{StaticResource  MainLabelStyle}"
-                Height="30"
-                Foreground="#00985f"
-                Content="Menu"/>
-            <Label
-                Style="{StaticResource  MainLabelStyle}"
-                Height="30"
+                Height="25"
                  x:Name="LoginLabel"
                 Content="login1"/>
             <Label
                 Style="{StaticResource  MainLabelStyle}"
-                Height="30"
+                Height="25"
                 x:Name="ManagerLabel"
                 Content="Manager"/>
         </StackPanel>
@@ -49,9 +41,9 @@
             Grid.Row="1" Grid.Column="1"
             VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged">
             <TextBlock
-                x:Name="SaleButtonм">sort by name</TextBlock>
+                x:Name="SaleButtonSorsName">sort by name</TextBlock>
             <TextBlock
-                x:Name="SaleButtonпа">sort by number</TextBlock>
+                x:Name="SaleButtonSorsNumber">sort by number</TextBlock>
         </ComboBox>
         
         <Button
@@ -72,13 +64,28 @@
             Style="{StaticResource MainButton1Style}"
             Content="Sale" 
             Click="SaleButton_Click"/>
-        <DataGrid Grid.Column="0" Grid.Row="1">
+        <DataGrid 
+            Grid.Column="1" 
+            Grid.Row="0" 
+            ItemsSource="{Binding Order}"
+            SelectedItem="{Binding ordersModel}"
+            AutoGenerateColumns="False" 
+            SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns >
                 <DataGridTextColumn Header="№"
                                     Binding="{Binding Id}"/>
-                <DataGridTextColumn Header="Name"/>
-                <DataGridTextColumn Header="Quantity of goods"/>
-                <DataGridTextColumn Header="Price"/>
+                <DataGridTextColumn Header="LastName" 
+                                    Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="FirstName" 
+                                    Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Patronymic" 
+                                    Binding="{Binding Patronymic}"/>
+                <DataGridTextColumn Header="Name" 
+                                    Binding="{Binding OrderName}"/>
+                <DataGridTextColumn Header="Amount" 
+                                    Binding="{Binding Amount}"/>
+                <DataGridTextColumn Header="Price" 
+                                    Binding="{Binding Price}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

@@ -1,4 +1,4 @@
-namespace HW.NewFolderOrders
+namespace HW.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -6,18 +6,23 @@ namespace HW.NewFolderOrders
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Client")]
-    public partial class Client
+    [Table("ListOfOrder")]
+    public partial class ListOfOrder
     {
+        [Key]
+        [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Id { get; set; }
-
         public int OrderId { get; set; }
 
-        public int UserId { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ProductsId { get; set; }
+
+        public bool? Del { get; set; }
 
         public virtual Order Order { get; set; }
 
-        public virtual UserData UserData { get; set; }
+        public virtual Products Products { get; set; }
     }
 }

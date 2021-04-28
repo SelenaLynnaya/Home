@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HW.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,11 +35,12 @@ namespace HW
         private void CreateUserButton_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void BackUserButton_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-    }
+            String lastname = LastNameText.Text;
+            String firstname = FirstNameText.Text;
+            String patronymic = PatronymicText.Text;
+            String name = NameText.Text;
+            String amount = AmountText.Text;
+            String price = PriceText.Text;
+        } 
+    } 
 }

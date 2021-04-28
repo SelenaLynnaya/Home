@@ -1,4 +1,4 @@
-namespace HW.NewFolderOrders
+namespace HW.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace HW.NewFolderOrders
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Products()
         {
-            Order = new HashSet<Order>();
+            ListOfOrder = new HashSet<ListOfOrder>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -25,6 +25,6 @@ namespace HW.NewFolderOrders
         public decimal Price { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<ListOfOrder> ListOfOrder { get; set; }
     }
 }

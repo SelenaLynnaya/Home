@@ -1,4 +1,4 @@
-namespace HW.NewFolderOrders
+namespace HW.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace HW.NewFolderOrders
         [StringLength(50)]
         public string Password { get; set; }
 
-        public int UserId { get; set; }
+        public int UserDataId { get; set; }
 
         public virtual UserData UserData { get; set; }
     }

@@ -1,4 +1,4 @@
-namespace HW.NewFolderOrders
+namespace HW.Entities
 {
     using System;
     using System.Data.Entity;
@@ -8,11 +8,12 @@ namespace HW.NewFolderOrders
     public partial class ModelOrders : DbContext
     {
         public ModelOrders()
-            : base("name=ModelOrders1")
+            : base("name=ModelOrders11")
         {
         }
 
         public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<ListOfOrder> ListOfOrder { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<Products> Products { get; set; }
         public virtual DbSet<UserData> UserData { get; set; }
@@ -20,30 +21,33 @@ namespace HW.NewFolderOrders
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Order>()
-                .HasMany(e => e.Client)
-                .WithRequired(e => e.Order)
+            modelBuilder.Entity<Client>()
+                .HasMany(e => e.Order)
+                .WithRequired(e => e.Client)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Order>()
-                .HasMany(e => e.Products)
-                .WithMany(e => e.Order)
-                .Map(m => m.ToTable("ListOfProductsInOrder").MapLeftKey("OrderId").MapRightKey("ProductId"));
+                .HasMany(e => e.ListOfOrder)
+                .WithRequired(e => e.Order)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Products>()
                 .Property(e => e.Price)
                 .HasPrecision(19, 4);
 
+            modelBuilder.Entity<Products>()
+                .HasMany(e => e.ListOfOrder)
+                .WithRequired(e => e.Products)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<UserData>()
                 .HasMany(e => e.Client)
                 .WithRequired(e => e.UserData)
-                .HasForeignKey(e => e.UserId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<UserData>()
                 .HasMany(e => e.Users)
                 .WithRequired(e => e.UserData)
-                .HasForeignKey(e => e.UserId)
                 .WillCascadeOnDelete(false);
         }
     }

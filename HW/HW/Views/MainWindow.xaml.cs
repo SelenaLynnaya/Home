@@ -1,4 +1,4 @@
-﻿using HW.NewFolderOrders;
+﻿using HW.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -28,11 +28,14 @@ namespace HW
         }
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
+
+            String login = TextBoxLogin.Text;
+            String password = PasswordBoxPassword.Password;
             using (var db = new ModelOrders())
             {
                 try
                 {
-                    var user = db.Users.FirstOrDefault(u => u.Login == TextBoxLogin.Text && u.Password == PasswordBoxPassword.Password);
+                    var user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == password);
 
                     if (user == null)
                         throw new Exception("Полькователя не существует");

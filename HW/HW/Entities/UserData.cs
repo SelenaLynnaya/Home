@@ -1,4 +1,4 @@
-namespace HW.NewFolderOrders
+namespace HW.Entities
 {
     using System;
     using System.Collections.Generic;

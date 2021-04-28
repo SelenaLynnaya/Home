@@ -5,22 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW"
         mc:Ignorable="d"
-        Title="Sale" Height="260" Width="400">
+        Title="Sale" Height="350" Width="250">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel VerticalAlignment="Stretch" Margin="10" Grid.Column="1"
+        <StackPanel VerticalAlignment="Stretch" Margin="0,0,0,0" Grid.Column="1"
             Grid.Row="0">
             <TextBox
+                x:Name="LastNameText"
             Style="{StaticResource  MainTextBoxStyle}"/>
             <TextBox
+                x:Name="FirstNameText"
             Style="{StaticResource  MainTextBoxStyle}"/>
             <TextBox
+                x:Name="PatronymicText"
             Style="{StaticResource  MainTextBoxStyle}"/>
             <TextBox
+                x:Name="NameText"
+            Style="{StaticResource  MainTextBoxStyle}"/>
+            <TextBox
+                x:Name="AmountText"
+            Style="{StaticResource  MainTextBoxStyle}"/>
+            <TextBox
+                x:Name="PriceText"
             Style="{StaticResource  MainTextBoxStyle}"/>
             <Button
                 x:Name="CreateUserButton"
@@ -30,38 +40,49 @@
                 Content="Create" Click="CreateUserButton_Click"  />
         </StackPanel>
 
-        <StackPanel VerticalAlignment="Stretch" Margin="10" Grid.Column="0"
+        <StackPanel VerticalAlignment="Stretch" Margin="0,0,0,0" Grid.Column="0"
             Grid.Row="0">
             <Label 
                 Style="{StaticResource MainLabelStyle}"
-                Width="50" 
+                Width="70" 
                 Height="27"
-                Margin="3"
-                 Content="№"/>
+                 Margin="0,10,0,0"
+                Content="LastName"/>
+            <Label 
+                Style="{StaticResource MainLabelStyle}"
+                Width="70" 
+                Height="27"
+                 Margin="0,12,0,0"
+                Content="FirstName"/>
+            <Label 
+                Style="{StaticResource MainLabelStyle}"
+                Width="80" 
+                 Margin="0,14,0,0"
+                Height="27"
+                 Content="Patronymic"/>
             <Label 
                 Style="{StaticResource MainLabelStyle}"
                 Width="60" 
                 Height="27"
-                Margin="13"
+                 Margin="0,16,0,0"
                  Content="Name"/>
             <Label 
                 Style="{StaticResource MainLabelStyle}"
                 Width="58" 
                 Height="27"
-                Margin="1"
-                 Content="Quantity"/>
+                 Margin="0,10,0,0"
+                 Content="Amount"/>
             <Label 
                 Style="{StaticResource MainLabelStyle}"
                 Width="50" 
                 Height="27"
-                Margin="10"
+                 Margin="0,12,0,4"
                  Content="Price"/>
             <Button
                 x:Name="BackUserButton"
                 Style="{StaticResource MainButton1Style}"
                 Width="80" 
                 Height="25"
-                Margin="10"
                 Content="Back" Click="BackUserButton_Click"  />
         </StackPanel>
     </Grid>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HW.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace HW
         public Manager()
         {
             InitializeComponent();
+            DataContext = new OrderViewModel();
         }
 
         private void SaleButton_Click(object sender, RoutedEventArgs e)
@@ -47,6 +49,11 @@ namespace HW
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
