@@ -29,6 +29,7 @@ namespace HW
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
 
+
             String login = TextBoxLogin.Text;
             String password = PasswordBoxPassword.Password;
             using (var db = new ModelOrders())
@@ -47,6 +48,7 @@ namespace HW
                     MessageBox.Show("Неправильный логин или пороль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
+                
 
             }
             Close();

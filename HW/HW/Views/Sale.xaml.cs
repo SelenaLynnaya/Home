@@ -41,6 +41,7 @@ namespace HW
             String name = NameText.Text;
             String amount = AmountText.Text;
             String price = PriceText.Text;
+
         } 
     } 
 }
