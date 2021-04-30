@@ -1,4 +1,5 @@
-﻿using HW.Model;
+﻿using HW.Entities;
+using HW.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,11 @@ namespace HW
         public Manager()
         {
             InitializeComponent();
+        }
+        public Manager(UserData user)
+        {
+            InitializeComponent();
+            LoginLabel.Content = user.Name;
             DataContext = new OrderViewModel();
         }
 
@@ -30,7 +36,6 @@ namespace HW
         {
             Sale sale = new Sale();
             sale.Show();
-            Close();
         }
 
         private void Sort_By_NumberButton_Click(object sender, RoutedEventArgs e)

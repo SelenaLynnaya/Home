@@ -26,10 +26,9 @@ namespace HW
         {
             InitializeComponent();
         }
+        //public string user1;
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-
-
             String login = TextBoxLogin.Text;
             String password = PasswordBoxPassword.Password;
             using (var db = new ModelOrders())
@@ -40,8 +39,13 @@ namespace HW
 
                     if (user == null)
                         throw new Exception("Полькователя не существует");
-                    Manager window = new Manager();
-                    window.Show();
+                    else
+                    {
+                        var user1 = db.UserData.FirstOrDefault(u => u.Id == user.UserDataId);
+                        
+                        Manager manage = new Manager(user1);
+                        manage.Show();
+                    }
                 }
                 catch (Exception)
                 {

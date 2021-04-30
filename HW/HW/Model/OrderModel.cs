@@ -14,6 +14,7 @@ namespace HW.Model
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Patronymic { get; set; }
+        public string ProductName { get; set; }
         public decimal Price { get; set; }
         public int Amount { get; set; }
 
@@ -29,7 +30,8 @@ namespace HW.Model
                 LastName = context.Client.UserData.Name,
                 Patronymic = context.Client.UserData.Patronymic,
                 Price = context.ListOfOrder.Where(o => o.OrderId == context.Id).Select(o => o.Products).Sum(p => p.Price),
-                Amount = context.ListOfOrder.Where(o => o.OrderId == context.Id).Select(o => o.Products).Count()
+                Amount = context.ListOfOrder.Where(o => o.OrderId == context.Id).Select(o => o.Products).Count(),
+                ProductName=context.ListOfOrder.FirstOrDefault(o => o.OrderId == context.Id).Products.Name
             };
         }
 

@@ -1,4 +1,5 @@
 ﻿using HW.Entities;
+using HW.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace HW
         public Sale()
         {
             InitializeComponent();
+            DataContext = new OrderViewModel();
         }
 
         private void BackUserButton_Click(object sender, RoutedEventArgs e)
@@ -39,9 +41,60 @@ namespace HW
             String firstname = FirstNameText.Text;
             String patronymic = PatronymicText.Text;
             String name = NameText.Text;
-            String amount = AmountText.Text;
+            String product = NameProductText.Text;
             String price = PriceText.Text;
 
+            using(var db= new ModelOrders())
+            {
+                try
+                {
+                    if(string.IsNullOrEmpty(lastname) || string.IsNullOrWhiteSpace(lastname) || string.IsNullOrEmpty(firstname)||string.IsNullOrWhiteSpace(firstname)
+                        || string.IsNullOrEmpty(patronymic) || string.IsNullOrWhiteSpace(patronymic) || string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name)
+                        || string.IsNullOrEmpty(product) || string.IsNullOrWhiteSpace(product) || string.IsNullOrEmpty(price) || string.IsNullOrWhiteSpace(price))
+                        throw new Exception("Не существует");
+
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Не внесены все данные", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                try
+                {
+                    db.UserData.Add(
+                        new UserData()
+                        {
+                            Id = 0,
+                            Surname = lastname,
+                            Name = firstname,
+                            Patronymic = patronymic
+                        });
+                    db.SaveChanges();
+                    db.Order.Add(
+                        new Order()
+                        {
+                            Id = 0,
+                            Name = name
+                        });
+                    db.Products.Add(
+                        new Products()
+                        {
+                            Id = 0,
+                            Name=product,
+                            Price = Convert.ToDecimal(price)
+                        });
+                    db.SaveChanges();
+                    throw new Exception("Полькователя не существует");
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Новый заказ", "Заказ", MessageBoxButton.OK, MessageBoxImage.Information);
+                    this.Close();
+                    return;
+                }
+            }
         } 
     } 
 }

@@ -9,7 +9,7 @@
         Title="Manager" Height="350" Width="660" Background="#fff">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -82,6 +82,8 @@
                                     Binding="{Binding Patronymic}"/>
                 <DataGridTextColumn Header="Name" 
                                     Binding="{Binding OrderName}"/>
+                <DataGridTextColumn Header="Product" 
+                                    Binding="{Binding ProductName}"/>
                 <DataGridTextColumn Header="Amount" 
                                     Binding="{Binding Amount}"/>
                 <DataGridTextColumn Header="Price" 
