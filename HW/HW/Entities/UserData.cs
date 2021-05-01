@@ -16,7 +16,6 @@ namespace HW.Entities
             Users = new HashSet<Users>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]

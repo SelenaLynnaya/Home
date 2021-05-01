@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:HW"
         xmlns:vm="clr-namespace:HW.Model"
         mc:Ignorable="d"
-        Title="Manager" Height="350" Width="660" Background="#fff">
+        Title="Manager" Height="350" Width="700" Background="#fff">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="150"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -67,6 +67,7 @@
         <DataGrid 
             Grid.Column="1" 
             Grid.Row="0" 
+            x:Name="myDataGrid"
             ItemsSource="{Binding Order}"
             SelectedItem="{Binding ordersModel}"
             AutoGenerateColumns="False" 

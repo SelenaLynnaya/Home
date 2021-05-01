@@ -15,7 +15,6 @@ namespace HW.Entities
             ListOfOrder = new HashSet<ListOfOrder>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]

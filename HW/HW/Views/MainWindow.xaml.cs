@@ -42,7 +42,6 @@ namespace HW
                     else
                     {
                         var user1 = db.UserData.FirstOrDefault(u => u.Id == user.UserDataId);
-                        
                         Manager manage = new Manager(user1);
                         manage.Show();
                     }

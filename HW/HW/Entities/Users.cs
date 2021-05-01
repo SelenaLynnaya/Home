@@ -8,7 +8,6 @@ namespace HW.Entities
 
     public partial class Users
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [Required]

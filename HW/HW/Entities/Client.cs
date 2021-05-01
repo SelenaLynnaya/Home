@@ -15,7 +15,6 @@ namespace HW.Entities
             Order = new HashSet<Order>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         public int UserDataId { get; set; }

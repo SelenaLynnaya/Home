@@ -13,7 +13,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
 namespace HW
 {
     /// <summary>
@@ -60,7 +59,6 @@ namespace HW
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
     }
 }

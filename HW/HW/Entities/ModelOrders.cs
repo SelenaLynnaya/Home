@@ -8,7 +8,7 @@ namespace HW.Entities
     public partial class ModelOrders : DbContext
     {
         public ModelOrders()
-            : base("name=ModelOrders11")
+            : base("name=ModelOrders")
         {
         }
 
