@@ -1,15 +1,27 @@
-ALTER TABLE Клиент
+ALTER TABLE Orders
 ADD DEL bit default 0;
 GO
 
-ALTER TABLE Карта
+ALTER TABLE Product
 ADD DEL bit default 0;
 GO
 
-ALTER TABLE Идентификатор
+ALTER TABLE Material
 ADD DEL bit default 0;
 GO
 
-ALTER TABLE ИдентификаторКарта
+ALTER TABLE Color
+ADD DEL bit default 0;
+GO
+
+ALTER TABLE ColorMaterial
+ADD DEL bit default 0;
+GO
+
+ALTER TABLE Client
+ADD DEL bit default 0;
+GO
+
+ALTER TABLE Type
 ADD DEL bit default 0;
 GO
