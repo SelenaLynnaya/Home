@@ -14,7 +14,7 @@ ALTER TABLE Color
 ADD DEL bit default 0;
 GO
 
-ALTER TABLE ColorMaterials
+ALTER TABLE Address
 ADD DEL bit default 0;
 GO
 
@@ -26,10 +26,10 @@ ALTER TABLE Type
 ADD DEL bit default 0;
 GO
 
-ALTER TABLE LiningMaterial
+ALTER TABLE LiningMaterials
 ADD DEL bit default 0;
 GO
 
-ALTER TABLE MaterialProduct
+ALTER TABLE ProductMaterial
 ADD DEL bit default 0;
 GO
