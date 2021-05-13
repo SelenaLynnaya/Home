@@ -26,7 +26,7 @@ ALTER TABLE Type
 ADD DEL bit default 0;
 GO
 
-ALTER TABLE LiningMaterials
+ALTER TABLE MaterialColor
 ADD DEL bit default 0;
 GO
 
